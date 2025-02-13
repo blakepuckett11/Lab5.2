@@ -1,4 +1,192 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+/* || General setup */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  background-color: #dde;
+}
+
+body {
+  width: 80%;
+  min-width: 1024px;
+  margin: 0 auto;
+}
+
+/* || paragraph */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* || Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1.8rem;
+  text-align: left;
+  background-color: white;
+}
+
+thead {
+  background-color: #000000;
+  color: white;
+}
+
+thead td {
+  font-weight: bold;
+  padding: 12px;
+  border: 1px solid white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+tbody td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+
+/* || typography */
+
+
+.header {
+  text-align: center;
+  font-family: 'Sonsie One', cursive;
+  font-size: 5rem;
+  color: white;
+  padding: 20px 0;
+  background-color: #000000;
+}
+
+.title {
+  font-family: 'Open Sans', cursive;
+  font-size: 4rem;
+}
+
+/* || navigation layout */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  padding: 10px 20px;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav li {
+  margin: 0 15px;
+}
+
+.nav a {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+}
+
+.nav a:hover {
+  background-color: #41388e;
+  border-radius: 5px;
+}
+
+/* || Search bar styling */
+.search {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search input[type="search"] {
+  font-size: 1.8rem;
+  padding: 8px;
+  width: 250px;
+}
+
+.search input[type="submit"] {
+  font-size: 1.8rem;
+  padding: 8px 15px;
+  background: #FFF;
+  border: 2px solid #5b685c51;
+  color: #000000;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search input[type="submit"]:hover {
+  background-color: #41388e;
+  color: white;
+}
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+
+/* || Main layout */
+
+main {
+  display: flex;
+  margin-top: 20px;
+}
+
+article {
+  flex: 5;
+  padding: 20px;
+  background-color: white;
+}
+
+.secondary {
+  flex: 2;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+/* Footer styling */
+
+footer {
+  margin-top: 10px;
+  text-align: center;
+  padding: 15px;
+  background-color: #000000;
+  color: white;
+}
+
+/* Comment labels */
+.comment-form label {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment-form input[type="text"] {
+  font-size: 1.6rem;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }

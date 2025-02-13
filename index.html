@@ -1,79 +1,183 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
 
-<head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="img/favicon.ico">
-</head>
+    <title>Accessibility assessment</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
 
-<body>
-  <h1>HTML Rocks!</h1>
-  <p>
-    <button  onclick="helloWorld()">Prints Hello World to the Developer console</button>
-  </p>
-  <hr>
-  <form id="addForm">
-    <label for="num1">Number 1:</label>
-    <input type="number" id="num1" name="num1" required>
-    <br>
-    <label for="num2">Number 2:</label>
-    <input type="number" id="num2" name="num2" required>
-    <br>
-    <button type="submit">Add Numbers</button>
-  </form>
+    <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
 
-  <label id="result">Result:</label>
+  <body>
+    <div class="header">
+      <font size="7">Welcome to our wildlife website</font>
+    </div>
 
-  <hr>
+    <div class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
 
-  <button id="jokeButton">Get a Random Joke</button>
-  <p id="joke"></p>
+      <form class="search">
+        <label for="search-input" class="hidden">Search query</label>
+        <input type="search" name="q" id="search-input" placeholder="Search query">
+        <input type="submit" value="Go!">
+      </form>
+      
+    </div>
 
-  <script type="module" script="js/main.js">
-    import {helloWorld, add, fetchRandomJoke} from './js/main.js';
+    <main>
+      <article>
+        <div class="title">
+          <font size="6">The trouble with Bears</font>
+        </div>
+        <br><br>
+        By Evan Wild
+        <br><br>
+        Tall, lumbering, angry, dangerous. The real live bears of this world are proud, independent creatures, self-serving and always on the hunt for food. Nothing like the bears you see on TV, like Baloo from renowned documentary, The Jungle Book.
+        <br><br>
+        So what are bears really like, and why does the world's media portray them with such a skewed vision? In this article we try to answer those questions, and give you a real insight into the life of the bear.
+        <br><br>
+        <div class="title">
+          <font size="5">Types of bear</font>
+        </div>
+        <br><br>
+        Bears come in two varieties — large and medium. You don't get small bears. If you have seen a small bear, then it was in fact probably a baby bear (cub) from another species.
+        <br><br>
+        Bears can also be classified in terms of their habitat — both large and medium bears are just as at home in urban areas as they are in the countryside. Different habitats encourange different behaviour however, as you'll find out below. The below table also gives you some useful facts about bears.
+        <br><br>
+        <table>
+          <thead>
+            <tr>
+              <td>Bear Type</td>
+              <td>Coat</td>
+              <td>Adult size</td>
+              <td>Habitat</td>
+              <td>Lifespan</td>
+              <td>Diet</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Wild</td>
+              <td>Brown or black</td>
+              <td>1.4 to 2.8 meters</td>
+              <td>Woods and forests</td>
+              <td>25 to 28 years</td>
+              <td>Fish, meat, plants</td>
+            </tr>
+            <tr>
+              <td>Urban</td>
+              <td>North Face</td>
+              <td>18 to 22</td>
+              <td>Condos and coffee shops</td>
+              <td>20 to 32 years</td>
+              <td>Starbucks, sushi</td>
+            </tr>
+          </tbody>
+        </table>
 
-    // This shows how to assign a function to the window object
-    // so that it can be called from the browser console
-    window.helloWorld = helloWorld;
+        <div class="title"><font size="5">Habitats and Eating habits</font></div>
+        <br><br>
+        Wild bears eat a variety of meat, fish, fruit, nuts, and other natually growing ingredients. In general they will hunt for food themselves in woodland or rivers, but at a push they will track down their sustenance from farms or country houses. They tend to live in relative isolation, in caves, tents, or cottages.
+        <br><br>
+        <img src="media/wild-bear.jpg">
+        <br><br>
+        Urban (gentrified) bears on the other hand have largely abandoned the old ways. They will hunt other urban creatures if necessary (including other predators like rats and foxes), but prefer to scavenge from readily available urban food outlets like dumpsters, bins, and fast food joints. When food has proven scarce, urban bears have even been known to break into people's kitchens and steal essentials like baked beans, ready meals, and microwave ovens.
+        <br><br>
+        <img src="media/urban-bear.jpg">
+        <br><br>
+        Urban bears will sleep anywhere they can, from bus shelters and parks, to the toilets in McDonalds, to their own apartment.
+        <br><br>
+        <div class="title"><font size="5">Mating rituals</font></div>
+        <br><br>
+        Bears are romantic creatures by nature, and will naturally look for a mate that they can spend the rest of their lives with. They will woo a potential suitor by making their dwelling look attractive — for example with cave paintings or a bed of reeds in the case of a wild bear, and mood lighting and a Michael Bublé CD in the case of an urban bear.
+        <br><br>
+        The following audio clip contains a fact file providing more details about bear mating rituals, along with samples and quotes from experts.
+        <br><br>
+        <audio controls>
+          <source src="media/bear.mp3" type="audio/mp3">
+          <source src="media/bear.ogg" type="audio/ogg">
+          <p>It looks like your browser doesn't support HTML5 audio players You can <a href="media/bear.mp3" download>download the audio file</a> instead.</p>
+        </audio>
+        <div class="audio-transcript">
+          <h3>Audio Transcript: </h3>
+          <p>"This isn't really an audio flat file about bears, but it is an audio file you can transcribe".</p>
+        </div>
+        <aside>
 
-    // This shows how to add an event listener to a button in the HTML
-    // and call a function when the button is clicked
-    const form = document.getElementById('addForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const num1 = parseFloat(document.getElementById('num1').value);
-      const num2 = parseFloat(document.getElementById('num2').value);
-      try{
-        const result = add(num1, num2);
-        document.getElementById('result').textContent = `Result: ${result}`;
-      }catch(e){
-        console.error(e);
-        document.getElementById('result').textContent = `Error: ${e.message}`;
-      }
+          <div class="title"><font size="5">About the author</font></div>
+        <br><br>
+          Evan Wild is an unemployed plumber from Doncaster, who has been really "in to" wildlife since childhood. He once went to Chester Zoo on holiday, but got ill after eating a doner kebab.
+        <br><br>
+          He has never seen a bear, but once read a Daily Mail article about them, and thinks they sound cool.
 
-    });
+        </aside>
+        <section class="comments">
+          <div class="show-hide">Show comments</div>
 
-    // this shows how to add an event listener to a button in the HTML
-    // that calls a function that fetches a random joke from an API
-    // and displays it on the page
-    const jokebtn = document.getElementById('jokeButton');
-    const jokeresult = document.getElementById('joke');
-    jokebtn.addEventListener('click', async () => {
-      try {
-        jokeresult.textContent = 'Loading...';
-        const joke = await fetchRandomJoke();
-        document.getElementById('joke').textContent = joke;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('joke').textContent = `Error: ${e.message}`;
-      }
-    });
-  </script>
+          <div class="comment-wrapper">
 
-</body>
+            <div class="title"><font size="6">Add comment</font></div>
 
+            <form class="comment-form">
+              <div class="flex-pair">
+                <label for="name">Your name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name">
+              </div>
+              <div class="flex-pair">
+                <label for="comment">Your comment:</label>
+                <input type="text" name="comment" id="comment" placeholder="Enter your comment">
+              </div>
+              <div>
+                <input type="submit" value="Submit comment">
+              </div>
+            </form>
+
+            <div class="title"><font size="6">Comments</font></div>
+
+            <ul class="comment-container">
+
+              <li>
+
+                <p>Bob Fossil</p>
+
+                <p>Oh I am so glad you taught me all about the big brown angry guys in the woods. With their sniffing little noses and their bad attitudes, they can sure be a menace — I was thinking of putting them all in a truck and driving them outta here. I run a zoo, you know.</p>
+
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+      </article>
+
+      <div class="secondary">
+        <div class="title"><font size="6">Related</font></div>
+
+        <ul><font size = "4">
+          <li><a href="#">The trouble with Bees</a></li>
+          <li><a href="#">The trouble with Otters</a></li>
+          <li><a href="#">The trouble with Penguins</a></li>
+          <li><a href="#">The trouble with Octopi</a></li>
+          <li><a href="#">The trouble with Lemurs</a></li>
+        </font>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+
+
+  </body>
 </html>
