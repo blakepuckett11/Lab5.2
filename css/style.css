@@ -174,7 +174,7 @@ footer {
   color: white;
 }
 
-/* Comment labels */
+/* Comment labels/button */
 .comment-form label {
   font-size: 1.8rem;
   font-weight: bold;
@@ -190,3 +190,21 @@ footer {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
+.show-hide {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.show-hide:hover,
+.show-hide:focus {
+  background-color: #0056b3;
+}
+
